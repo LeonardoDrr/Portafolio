@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu(event)">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <a href="#" target="_blank" class="logo">
+                <i class="fas fa-briefcase"></i> PORTAFOLIO
+            </a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+        <!-- Tarjeta 1 -->
+        <div class="portfolio-card">
+            <a href="#" target="_blank" class="project-link">
+                <img src="curriculum.jpg" alt="Proyecto 1">
+            </a>
+            <div class="card-content">
+                <h2>CURRICULUM DE LEONARDO</h2>
+                <p>Click para ver...</p>
+                <a href="#" target="_blank" class="btn">Ver Proyecto</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="portfolio-card">
+            <a href="1/index.html" target="_blank" class="project-link">
+                <img src="image1.jpg" alt="Proyecto 2">
+            </a>
+            <div class="card-content">
+                <h2>Registro de asistencias v1</h2>
+                <p>Esta versión tiene un filtro que trabaja desde las 5am hasta 10am como entrada y de 10:01am hasta 5pm como salida, fuera de ese horario no deja registrar a nadie más y todo rápidamente...</p>
+                <a href="1/index.html" target="_blank" class="btn">Ver Proyecto</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="portfolio-card">
+            <a href="2/index.html" target="_blank" class="project-link">
+                <img src="image2.jpg" alt="Proyecto 3">
+            </a>
+            <div class="card-content">
+                <h2>Registro de asistencias v2</h2>
+                <p>Esta versión es más simple y con menos posibilidades de errores humanos, la diferencia de la v1 es que esta tiene ahora un botón que permite seleccionar entrada o salida y por supuesto el ID para hacer el registro, si uno de cualquier de los 2 datos no está seleccionado o agregado saldrá un mensaje que hasta no seleccionar no será registrado.</p>
+                <a href="2/index.html" target="_blank" class="btn">Ver Proyecto</a>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="portfolio-card">
+            <a href="https://gesf.netlify.app" target="_blank" class="project-link">
+                <img src="escuela.jpg" alt="Proyecto 4">
+            </a>
+            <div class="card-content">
+                <h2>PÁGINA WEB PARA EL INSTITUTO Grupo Escolar San Francisco</h2>
+                <p>Web informativa de la institución con varios usos incluidos. Puedes darle click y verla tú mismo; tiene compatibilidad para celulares y computadoras.</p>
+                <p class="warning">Advertencia: Al darle click serás dirigido a aquella página y como está operativa a esa institución no tiene botón o link para llevarte de nuevo a esta página para ver mi portafolio. ¡Gracias por ver!</p>
+                <a href="https://gesf.netlify.app" target="_blank" class="btn">Ver Proyecto</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer fijo -->
+    <footer class="footer-fixed">
+        <p>&copy; 2025 ING Leonardo Daniel Rubio Rojas. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Menú desplegable -->
+    <div class="sidebar" id="sidebar">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=leonardorojas30.10.2003@gmail.com&su=Asunto%20del%20mensaje&body=Hola,%20me%20gustaría%20contactarte%20para..." target="_blank" class="menu-item gmail">
+            <i class="fas fa-envelope"></i> Gmail
+        </a>
+        <a href="https://wa.me/+584146329982?text=Hola,%20me%20gustaría%20contactarte%20para..." target="_blank" class="menu-item whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://t.me/Deathjjoker" target="_blank" class="menu-item telegram">
+            <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+    </div>
+
+    <!-- Script para el menú -->
+    <script>
+        // Función para alternar el menú
+        function toggleMenu(event) {
+            event.stopPropagation(); // Evita que el clic en el ícono active el listener del documento
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+
+        // Cerrar el menú al hacer clic fuera de él
+        document.addEventListener("click", function () {
+            const sidebar = document.getElementById("sidebar");
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active");
+            }
+        });
+
+        // Evitar que el clic dentro del menú lo cierre
+        document.getElementById("sidebar").addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>
