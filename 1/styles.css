@@ -262,29 +262,6 @@ body {
     z-index: 999;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .project-title {
-        font-size: 1.5rem;
-    }
-
-    .project-description {
-        font-size: 1rem;
-    }
-
-    .photo-album {
-        grid-template-columns: 1fr;
-    }
-
-    .sidebar {
-        width: 100%; /* Ocupa todo el ancho en móviles */
-        left: -100%; /* Ocultar completamente fuera de la pantalla */
-    }
-
-    .sidebar.active {
-        left: 0; /* Mostrar completamente en la pantalla */
-    }
-}
 
 /* Estilo para la caja de descripción */
 .project-description-box {
@@ -337,3 +314,43 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+@media (max-width: 768px) {
+    .portfolio-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-link {
+        margin-bottom: 20px;
+    }
+    .project-title {
+        font-size: 1.5rem;
+    }
+    .project-description {
+        font-size: 1rem;
+    }
+
+    .card-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .portfolio-card {
+        max-width: 90%;
+    }
+
+    .sidebar {
+        width: 80%; /* Ocupa el 80% del ancho en móviles */
+        max-width: 300px; /* Ancho máximo */
+        max-height: 80vh; /* Altura máxima del 80% de la pantalla */
+    }
+
+    .sidebar.active {
+        left: 0; /* Mostrar completamente en la pantalla */
+    }
+    .photo-album {
+        grid-template-columns: 1fr;
+    }
+}
+
+

@@ -171,6 +171,7 @@ body {
     opacity: 0;
     pointer-events: none;
     z-index: 1000;
+    overflow-y: auto;
 }
 
 .sidebar.active {
@@ -236,6 +237,12 @@ body {
     .project-link {
         margin-bottom: 20px;
     }
+    .project-title {
+        font-size: 1.5rem;
+    }
+    .project-description {
+        font-size: 1rem;
+    }
 
     .card-content {
         padding-left: 0;
@@ -247,11 +254,16 @@ body {
     }
 
     .sidebar {
-        width: 100%; /* Ocupa todo el ancho en móviles */
-        left: -100%; /* Ocultar completamente fuera de la pantalla */
+        width: 80%; /* Ocupa el 80% del ancho en móviles */
+        max-width: 300px; /* Ancho máximo */
+        max-height: 80vh; /* Altura máxima del 80% de la pantalla */
     }
 
     .sidebar.active {
         left: 0; /* Mostrar completamente en la pantalla */
     }
+    .photo-album {
+        grid-template-columns: 1fr;
+    }
 }
+
